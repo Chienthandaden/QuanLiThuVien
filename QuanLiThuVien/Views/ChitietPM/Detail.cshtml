@@ -1,0 +1,59 @@
+﻿@model QuanLiThuVien.Models.PhieuMuon
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detail</h2>
+
+<div>
+    <h4>PhieuMuon</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Ma Doc Gia
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaDocGia)
+        </dd>
+
+        <dt>
+            Ma Sach
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaSach)
+        </dd>
+
+        <dt>
+            Ngay Muon
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayMuon)
+        </dd>
+
+        <dt>
+            Ngay Hen Tra
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayHenTra)
+        </dd>
+
+        <dt>
+            Ten Nguoi Muon
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenNguoiMuon)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaPhieuMuon }) |
+    @Html.ActionLink("Back to List", "chitiet")
+</p>

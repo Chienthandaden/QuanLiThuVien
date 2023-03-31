@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.25" name="MyData">
+  <DataContextMoniker Name="/MyDataDataContext" />
+  <nestedChildShapes>
+    <classShape Id="4b500c10-c2f2-4b17-8ee7-a186c946fd4d" absoluteBounds="8.75, 0.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/MyDataDataContext/DocGia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="13473e4b-6aa9-455c-a66a-283fae36496c" absoluteBounds="8.765, 1.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1c505ad1-8f4e-47b4-a90e-f256456763e9" absoluteBounds="3.25, 3.25, 2, 2.5401025390625">
+      <DataClassMoniker Name="/MyDataDataContext/Sach" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a87a292d-2956-47a7-84f1-3b3cb8949d26" absoluteBounds="3.265, 3.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e8c3441e-8bf1-4d97-b512-9b59e507c2bb" absoluteBounds="0.625, 3.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/MyDataDataContext/TheLoai" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7286bd9c-fe2c-4b94-b5b0-4c2e743be06a" absoluteBounds="0.64, 4.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.625 : 4.34699625651042); (3.25 : 4.34699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MyDataDataContext/TheLoai/TheLoai_Sach" />
+      <nodes>
+        <classShapeMoniker Id="e8c3441e-8bf1-4d97-b512-9b59e507c2bb" />
+        <classShapeMoniker Id="1c505ad1-8f4e-47b4-a90e-f256456763e9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d0a767ee-bab5-4e3d-a4cc-5dfb7a1e6f41" absoluteBounds="6.375, 3.625, 2, 1.9631982421875">
+      <DataClassMoniker Name="/MyDataDataContext/PhieuMuon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb948903-3b2a-40de-8055-541a087367ad" absoluteBounds="6.39, 4.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.75 : 3.2901025390625); (8.375 : 3.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MyDataDataContext/DocGia/DocGia_PhieuMuon" />
+      <nodes>
+        <classShapeMoniker Id="4b500c10-c2f2-4b17-8ee7-a186c946fd4d" />
+        <classShapeMoniker Id="d0a767ee-bab5-4e3d-a4cc-5dfb7a1e6f41" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.25 : 4.60659912109375); (6.375 : 4.60659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyDataDataContext/Sach/Sach_PhieuMuon" />
+      <nodes>
+        <classShapeMoniker Id="1c505ad1-8f4e-47b4-a90e-f256456763e9" />
+        <classShapeMoniker Id="d0a767ee-bab5-4e3d-a4cc-5dfb7a1e6f41" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5c3600ce-883d-4289-82ae-687763aa99ee" absoluteBounds="3.625, 0.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/MyDataDataContext/PhieuTra" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3e55c114-32dc-4fc3-8beb-597468c31496" absoluteBounds="3.6399999999999997, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.75 : 1.70274983723958); (5.625 : 1.70274983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MyDataDataContext/DocGia/DocGia_PhieuTra" />
+      <nodes>
+        <classShapeMoniker Id="4b500c10-c2f2-4b17-8ee7-a186c946fd4d" />
+        <classShapeMoniker Id="5c3600ce-883d-4289-82ae-687763aa99ee" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.4375 : 3.25); (4.4375 : 2.65549967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MyDataDataContext/Sach/Sach_PhieuTra" />
+      <nodes>
+        <classShapeMoniker Id="1c505ad1-8f4e-47b4-a90e-f256456763e9" />
+        <classShapeMoniker Id="5c3600ce-883d-4289-82ae-687763aa99ee" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0d51a7b1-e3a8-42ed-936f-55e535b584ba" absoluteBounds="5.125, 6.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/MyDataDataContext/NhanVien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="df3f6bbb-9b65-4721-bd54-c556e7bdb78c" absoluteBounds="5.1400000000000006, 7.3350000000000009, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f5dcce0d-8b13-4229-a797-e98f9ca63d7c" absoluteBounds="1.375, 7, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/MyDataDataContext/TaiKhoan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b1ba4903-8d35-4748-beef-4ea382a2bc18" absoluteBounds="1.3899999999999997, 7.4600000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.375 : 7.88544840494792); (5.125 : 7.88544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyDataDataContext/TaiKhoan/TaiKhoan_NhanVien" />
+      <nodes>
+        <classShapeMoniker Id="f5dcce0d-8b13-4229-a797-e98f9ca63d7c" />
+        <classShapeMoniker Id="0d51a7b1-e3a8-42ed-936f-55e535b584ba" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

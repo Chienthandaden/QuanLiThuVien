@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CF979D40-56DC-4EB3-92B5-FDB864B36640}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLiThuVien</RootNamespace>
+    <AssemblyName>QuanLiThuVien</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44300</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.8\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ChitietPMController.cs" />
+    <Compile Include="Controllers\ChitietPTController.cs" />
+    <Compile Include="Controllers\DangnhapController.cs" />
+    <Compile Include="Controllers\DocgiaController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NhanVienController.cs" />
+    <Compile Include="Controllers\PhieuMuonController.cs" />
+    <Compile Include="Controllers\ThuvienController.cs" />
+    <Compile Include="Controllers\TrangChuController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\Class.cs" />
+    <Compile Include="Models\MyData.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyData.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Phieumuon.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\1 %281%29.jpg" />
+    <Content Include="Content\img\sach\10-loai-hinh-doi-moi-sang-tao.jpg" />
+    <Content Include="Content\img\sach\13_0.jpg" />
+    <Content Include="Content\img\sach\30-giay-ai-va-robot-hoc.jpg" />
+    <Content Include="Content\img\sach\30-giay-y-hoc.jpg" />
+    <Content Include="Content\img\sach\337834845c21d1ba74c5b774f805cea8.jpg" />
+    <Content Include="Content\img\sach\4-mon-qua-tang-con.jpg" />
+    <Content Include="Content\img\sach\600-essential-word-for-the-toeic.jpg" />
+    <Content Include="Content\img\sach\99-thu-thach-tu-vung-1.jpg" />
+    <Content Include="Content\img\sach\aHR0cHM6Ly9zYWx0LnRpa2ljZG4uY29tL3RzL3Byb2R1Y3QvNTMvMGIvMGUvMjIyYzU0NTU0ODk3ZmE0NzFmOGExNzhlODU4NjJmNmIuanBn.jpg" />
+    <Content Include="Content\img\sach\am-anh-an-sach.jpg" />
+    <Content Include="Content\img\sach\anhnen.png" />
+    <Content Include="Content\img\sach\ao-trang-bien-lang.jpg" />
+    <Content Include="Content\img\sach\b1cb8713c960e18c41bef97120faf749.jpg" />
+    <Content Include="Content\img\sach\ba-phut-so-cuu-bia.jpg" />
+    <Content Include="Content\img\sach\bat-tre-dong-xanh-bia.jpg" />
+    <Content Include="Content\img\sach\bi-quyet-giup-con-gioi-tieng-anh.jpg" />
+    <Content Include="Content\img\sach\big-data-cho-nha-quan-ly.jpg" />
+    <Content Include="Content\img\sach\cam-nang-nuoi-day-con-theo-phuong-phap-montessori.jpg" />
+    <Content Include="Content\img\sach\cau-do-viet-nam-bia-truoc.jpg" />
+    <Content Include="Content\img\sach\cha-me-phap-khong-dau-hang.jpg" />
+    <Content Include="Content\img\sach\cha-me-thoi-dai-ki-thuat-so.jpg" />
+    <Content Include="Content\img\sach\cha-me-vo-dieu-kien.jpg" />
+    <Content Include="Content\img\sach\cham-az-viet-nam.jpg" />
+    <Content Include="Content\img\sach\cho-den-mau-giao-thi-da-muon.jpg" />
+    <Content Include="Content\img\sach\chu-nghia-toi-gian.jpg" />
+    <Content Include="Content\img\sach\combo-tau-pha-bang-snow-bo-3-tap_L.jpg" />
+    <Content Include="Content\img\sach\con-chung-ta-khong-sao-dau.jpg" />
+    <Content Include="Content\img\sach\con-la-cua-bau.jpg" />
+    <Content Include="Content\img\sach\content-dat-co-bat-duoc-trend.jpg" />
+    <Content Include="Content\img\sach\cung-con-buoc-qua-tieu-hoc.jpg" />
+    <Content Include="Content\img\sach\cung-con-hoc-noi.jpg" />
+    <Content Include="Content\img\sach\cung-con-lon-len-tung-ngay.jpg" />
+    <Content Include="Content\img\sach\cuoc-chien-lo-den-bia.jpg" />
+    <Content Include="Content\img\sach\dai-viet-su-ky-tuc-bien-1676-1789.jpg" />
+    <Content Include="Content\img\sach\dan-dat-su-thay-doi.jpg" />
+    <Content Include="Content\img\sach\danh-nhan-quan-su-viet-nam.jpg" />
+    <Content Include="Content\img\sach\dau-an-khoi-dong-van-hoa-viet.jpg" />
+    <Content Include="Content\img\sach\day-con-tap-boi.jpg" />
+    <Content Include="Content\img\sach\de-che-alibaba-bia.jpg" />
+    <Content Include="Content\img\sach\di-ra-the-gioi-voi-nguoi-khong-lo-1.jpg" />
+    <Content Include="Content\img\sach\dien-chan-dieu-khien-lieu-phap.jpg" />
+    <Content Include="Content\img\sach\dieu-vi-dai-doi-thuong.jpg" />
+    <Content Include="Content\img\sach\dinh-ninh-toi-hoc-mach.jpg" />
+    <Content Include="Content\img\sach\doi-thay-doi-khi-ta-thoi-day.jpg" />
+    <Content Include="Content\img\sach\download.jpg" />
+    <Content Include="Content\img\sach\download.png" />
+    <Content Include="Content\img\sach\dung-bao-gio-di-an-1-minh.gif" />
+    <Content Include="Content\img\sach\dung-bao-gio-di-an-1-minh.jpg" />
+    <Content Include="Content\img\sach\duong-sinh-bia.jpg" />
+    <Content Include="Content\img\sach\ea99106193d3cab8cd9227476cb960cf.gif" />
+    <Content Include="Content\img\sach\giai-ma-sieu-tri-tue-the-code-of-the-extraordinary-mind.jpg" />
+    <Content Include="Content\img\sach\giao-trinh-duong-loi-cah-mang-cua-dang-cong-san-viet-nam.jpg" />
+    <Content Include="Content\img\sach\Giao-trinh-HTTT-huong-doi-tuong-min.jpg" />
+    <Content Include="Content\img\sach\giao-trinh-nguyen-ly-he-dieu-hanh-%28nxb-giao-duc-2010%29---ho-dac-phuong,-273-trang.pdf-0.jpg" />
+    <Content Include="Content\img\sach\giao-trinh-tu-tuong-ho-chi-minh.jpg" />
+    <Content Include="Content\img\sach\giao-trinh-xa-hoi-hoc-dai-cuong.jpg" />
+    <Content Include="Content\img\sach\giup-con-phat-trien-ngon-ngu.jpg" />
+    <Content Include="Content\img\sach\hay-noi-voi-con-rang-con-gioi-lam.jpg" />
+    <Content Include="Content\img\sach\hoa-hong-sa-mac.jpg" />
+    <Content Include="Content\img\sach\hoa-tuylip-den-dong-a.jpg" />
+    <Content Include="Content\img\sach\hoc-jack-ma-khoi-nghiep.jpg" />
+    <Content Include="Content\img\sach\hoc-lam-cha-me-hieu-qua.jpg" />
+    <Content Include="Content\img\sach\hung-manh-hon-sau-khung-hoang.jpg" />
+    <Content Include="Content\img\sach\hệ-điều-hành-Linux.jpg" />
+    <Content Include="Content\img\sach\images.png" />
+    <Content Include="Content\img\sach\ke-tiep-chuyen-bac-ho.jpg" />
+    <Content Include="Content\img\sach\khoa-hoc-cuc-ngau.jpg" />
+    <Content Include="Content\img\sach\khoa-hoc-that-la-vui-cuoc-song-cua-mot-nha-du-hanh-vu-tru.jpg" />
+    <Content Include="Content\img\sach\khong-hoang-loan-khi-con-ket-ban.jpg" />
+    <Content Include="Content\img\sach\kiem-tien-thoi-khung-hoang.jpg" />
+    <Content Include="Content\img\sach\luat-im-lang-bia-1.jpg" />
+    <Content Include="Content\img\sach\luoc-su-kinh-te-hoc.jpg" />
+    <Content Include="Content\img\sach\luyen-thi-toeic-750-reading-tai-ban.jpg" />
+    <Content Include="Content\img\sach\luyen-thi-toeic-850-reading-tai-ban-2018.gif" />
+    <Content Include="Content\img\sach\mac.jpg" />
+    <Content Include="Content\img\sach\macdepdethanhcong.jpg" />
+    <Content Include="Content\img\sach\me-danh-ca-the-gioi-cho-con.jpg" />
+    <Content Include="Content\img\sach\muon-kiep-nhan-sinh-many-times-many-lives.jpg" />
+    <Content Include="Content\img\sach\muu-luoc-trong-kinh-doanh.jpg" />
+    <Content Include="Content\img\sach\nang-tam-dich-vu.jpg" />
+    <Content Include="Content\img\sach\ngan-hang-biet-tim-khach-hang-o-dau.jpg" />
+    <Content Include="Content\img\sach\ngoai-giao-cua-chinh-quyen-sai-gon.jpg" />
+    <Content Include="Content\img\sach\nguoi-me-tot-hon-la-nguoi-thay-tot.jpg" />
+    <Content Include="Content\img\sach\nhin-an-gian-doan.jpg" />
+    <Content Include="Content\img\sach\nhung-ngo-nhan-vi-suc-khoe.jpg" />
+    <Content Include="Content\img\sach\nhung-nha-kinh-te-tien-phong.jpg" />
+    <Content Include="Content\img\sach\nong-trai-nuoi-song-chung-ta.jpg" />
+    <Content Include="Content\img\sach\ong-gia-va-bien-ca.gif" />
+    <Content Include="Content\img\sach\phe-dai-truong-trong-dong-y.jpg" />
+    <Content Include="Content\img\sach\phuong-phap-tao-dong-luc-trong-cong-viec.jpg" />
+    <Content Include="Content\img\sach\quan-ly-chuyen-nghiep.jpg" />
+    <Content Include="Content\img\sach\quan-tri-rui-ro-phap-ly-trong-kinh-doanh.jpg" />
+    <Content Include="Content\img\sach\quan-tri-theo-phong-cach-co-vay.jpg" />
+    <Content Include="Content\img\sach\quan-tri-trong-thoi-khung-hoang.jpg" />
+    <Content Include="Content\img\sach\quy-tac-5-giay-nha-nam.jpg" />
+    <Content Include="Content\img\sach\quy-trinh-ban-hang-chuyen-nghiep.jpg" />
+    <Content Include="Content\img\sach\sach-cap-toc-789-tong-on-thi-thpt-quoc-gia-mon-anh_L.jpg" />
+    <Content Include="Content\img\sach\sach-day-tre-an-toan-vuot-ngan-nguy-hiem-lam-gi-khi-bi-du-do-lac-duong_L.jpg" />
+    <Content Include="Content\img\sach\sach-day-tre-an-toan-vuot-ngan-nguy-hiem-lam-gi-khi-xay-ra-dong-dat-song-than_L.jpg" />
+    <Content Include="Content\img\sach\sach-day-tre-an-toan-vuot-ngan-nguy-hiem-lam-gi-khi-xay-ra-hoa-hoan_L.jpg" />
+    <Content Include="Content\img\sach\sach-illustrated-classics-nghin-le-mot-dem-1_L.jpg" />
+    <Content Include="Content\img\sach\sach-illustrated-classics-truyen-co-andersen_L.jpg" />
+    <Content Include="Content\img\sach\sach-illustrated-classics-truyen-thuyet-vua-arthur-1_L.jpg" />
+    <Content Include="Content\img\sach\sach-kiep-ba-khia_L.jpg" />
+    <Content Include="Content\img\sach\sieu-nang-suat.jpg" />
+    <Content Include="Content\img\sach\sieu-tri-nho-1.jpg" />
+    <Content Include="Content\img\sach\song-manh-khoe-nho-an-uong.jpg" />
+    <Content Include="Content\img\sach\starter-toeic.jpg" />
+    <Content Include="Content\img\sach\suc-khoe-gia-dinh.jpg" />
+    <Content Include="Content\img\sach\tam-hon-cao-thuong-bia.jpg" />
+    <Content Include="Content\img\sach\tam-ly-hoc-tich-cuc.jpg" />
+    <Content Include="Content\img\sach\the-gioi-se-ra-sao.jpg" />
+    <Content Include="Content\img\sach\thien-chua-lanh-than-va-tam.jpg" />
+    <Content Include="Content\img\sach\thoi-ca-voi-biet-di.jpg" />
+    <Content Include="Content\img\sach\thuc-hanh-thien-dinh.jpg" />
+    <Content Include="Content\img\sach\thuong-kinh-ky-su.jpg" />
+    <Content Include="Content\img\sach\tieng-goi-noi-hoang-gia-1.jpg" />
+    <Content Include="Content\img\sach\tiktok-marketing.jpg" />
+    <Content Include="Content\img\sach\trai-nghiem-khach-hang.jpg" />
+    <Content Include="Content\img\sach\tranh-cham-cuu-giai-phau-thuc-dung.jpg" />
+    <Content Include="Content\img\sach\tri-thong-minh-da-dang-cua-tre-1280.jpg" />
+    <Content Include="Content\img\sach\tro-chuyen-voi-ac-quy.jpg" />
+    <Content Include="Content\img\sach\trong-sach-co-gi-ma-vui-the.jpg" />
+    <Content Include="Content\img\sach\trung-so-doc-dac-tieu-thuyet-440.jpg" />
+    <Content Include="Content\img\sach\tu-duy-amazon-think-like-amazon.jpg" />
+    <Content Include="Content\img\sach\tu-duy-don-gian.jpg" />
+    <Content Include="Content\img\sach\tu-sach-bac-ho-ke-chuyen-bac-ho.jpg" />
+    <Content Include="Content\img\sach\tuong-lai-nhan-loai.jpg" />
+    <Content Include="Content\img\sach\tuong-lai-thuoc-ve-chau-a.jpg" />
+    <Content Include="Content\img\sach\untitled-1.png" />
+    <Content Include="Content\img\sach\van-phong-khong-nhat-nheo.jpg" />
+    <Content Include="Content\img\sach\vat-ly-cua-tuong-lai.jpg" />
+    <Content Include="Content\img\sach\ve-trung-quoc.jpg" />
+    <Content Include="Content\img\sach\vi-choi-la-hoc-danh-cho-tre-1-2-tuoi.jpg" />
+    <Content Include="Content\img\sach\vi-dai-mot-con-nguoi.jpg" />
+    <Content Include="Content\img\sach\vua-luoi-vua-ban-van-gioi-tieng-anhbia.jpg" />
+    <Content Include="Content\img\sach\y-hoc-thuc-chung1.jpg" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Models\MyData.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>MyData.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Models\MyData.dbml.layout">
+      <DependentUpon>MyData.dbml</DependentUpon>
+    </None>
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Thuvien\Index.cshtml" />
+    <Content Include="Views\Thuvien\Detail.cshtml" />
+    <Content Include="Views\Thuvien\Create.cshtml" />
+    <Content Include="Views\Thuvien\Edit.cshtml" />
+    <Content Include="Views\Thuvien\Delete.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\PhieuMuon\PhieuMuon.cshtml" />
+    <Content Include="Views\PhieuMuon\PhieuMuonPartial.cshtml" />
+    <Content Include="Views\Dangnhap\DangNhap.cshtml" />
+    <Content Include="Views\Dangnhap\Create.cshtml" />
+    <Content Include="Views\ChitietPM\chitiet.cshtml" />
+    <Content Include="Views\ChitietPM\Create.cshtml" />
+    <Content Include="Views\ChitietPM\Edit.cshtml" />
+    <Content Include="Views\ChitietPM\Delete.cshtml" />
+    <Content Include="Views\ChitietPM\Detail.cshtml" />
+    <Content Include="Views\ChitietPT\Index.cshtml" />
+    <Content Include="Views\ChitietPT\Detail.cshtml" />
+    <Content Include="Views\ChitietPT\Create.cshtml" />
+    <Content Include="Views\ChitietPT\Edit.cshtml" />
+    <Content Include="Views\ChitietPT\Delete.cshtml" />
+    <Content Include="Views\Docgia\Index.cshtml" />
+    <Content Include="Views\Docgia\Detail.cshtml" />
+    <Content Include="Views\Docgia\Create.cshtml" />
+    <Content Include="Views\Docgia\Edit.cshtml" />
+    <Content Include="Views\Docgia\Delete.cshtml" />
+    <Content Include="Views\NhanVien\Index.cshtml" />
+    <Content Include="Views\NhanVien\Detail.cshtml" />
+    <Content Include="Views\NhanVien\Create.cshtml" />
+    <Content Include="Views\NhanVien\Edit.cshtml" />
+    <Content Include="Views\NhanVien\Delete.cshtml" />
+    <Content Include="Views\TrangChu\Index.cshtml" />
+    <Content Include="Views\PhieuMuon\MuonSach.cshtml" />
+    <Content Include="Views\PhieuMuon\XacnhanPhieumuon.cshtml" />
+    <Content Include="Views\PhieuMuon\PhieuMuonTrong.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60421</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44300/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

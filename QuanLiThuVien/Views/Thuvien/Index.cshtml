@@ -1,0 +1,49 @@
+﻿@model IEnumerable<QuanLiThuVien.Models.Sach>
+@{
+    ViewBag.Title = "Thu vien";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thư Viện Sách</h2>
+<p>
+    @Html.ActionLink("Thêm Sách", "Create")
+</p>
+@using (Html.BeginForm())
+{
+    <p style="text-align:right">
+
+        Tên Sách: @Html.TextBox("SearchString") <input type="submit" value="Tìm kiếm" />
+    </p>
+    
+
+}
+
+
+
+
+<table class="table">
+    <tr>
+
+        <th> Tên Sách  </th>
+        <th> Tên Tác Giả </th>
+        <th> Số Lượng </th>
+        <th> Hình Ảnh </th>
+
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@Html.DisplayFor(modelItem => item.TenSach)</td>
+            <td>@Html.DisplayFor(modelItem => item.TacGia)</td>
+            <td>@Html.DisplayFor(modelItem => item.SoLuong)</td>
+            <td><img src="@item.HinhAnh" alt="hinh thumbnail" width="150px" height="200px" /></td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MaSach }) |
+                @Html.ActionLink("Detail", "Detail", new { id = item.MaSach }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MaSach })
+            </td>
+        </tr>
+    }
+</table>

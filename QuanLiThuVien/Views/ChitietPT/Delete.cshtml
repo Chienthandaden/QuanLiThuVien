@@ -1,0 +1,73 @@
+﻿@model QuanLiThuVien.Models.PhieuTra
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Xoa Phieu Tra</h2>
+
+<h3>Chac Chua?</h3>
+<div>
+    <h4>PhieuTra</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Ma Doc Gia
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaDocGia)
+        </dd>
+
+        <dt>
+            Ma Sach
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaSach)
+        </dd>
+
+        <dt>
+            Ngay Tra
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayTra)
+        </dd>
+
+        <dt>
+            Tien Phat
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TienPhat)
+        </dd>
+
+        <dt>
+            Ten Nguoi Tra
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenNguoiTra)
+        </dd>
+
+        <dt>
+            Li Do Phat
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LiDoPhat)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

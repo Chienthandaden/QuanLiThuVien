@@ -1,0 +1,89 @@
+﻿@model QuanLiThuVien.Models.Sach
+
+@{
+    ViewBag.Title = "Xoa Sach";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Xóa</h2>
+
+<h3>Bạn Chắc Chưa ?</h3>
+<div>
+    <h4>Sách</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Thể Loại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaTheLoai)
+        </dd>
+
+        <dt>
+            Tên Sách
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSach)
+        </dd>
+
+        <dt>
+            Tác Giả
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TacGia)
+        </dd>
+
+        <dt>
+            Nhà Xuất Bản
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhaXuatBan)
+        </dd>
+
+        <dt>
+            Số Lượng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            Giá Tiền
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaTien)
+        </dd>
+
+        <dt>
+            Hình Ảnh
+        </dt>
+
+        <dd>
+            <img src="@Model.HinhAnh" width="150px" height="200px" />
+        </dd>
+
+        <dt>
+            Mô Tả
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MoTa)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về thư viện", "Index")
+        </div>
+    }
+</div>

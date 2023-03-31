@@ -1,0 +1,67 @@
+﻿@model QuanLiThuVien.Models.NhanVien
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chi Tiết</h2>
+
+<div>
+    <h4>Nhân Viên</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã tài khoản
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaTaiKhoan)
+        </dd>
+
+        <dt>
+           Họ tên
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTen)
+        </dd>
+
+        <dt>
+            Ngày sinh
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgaySinh)
+        </dd>
+
+        <dt>
+            Giới tính
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GioiTinh)
+        </dd>
+
+        <dt>
+            Địa chỉ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            Email
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaNhanVien }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

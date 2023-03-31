@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LmaoLibrary</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+    <style>
+        .navbar-inverse {
+            background-color: lightskyblue;
+            border-color: white;
+            font-weight: bold;
+        }
+            .navbar-inverse .navbar-nav > li > a {
+                color: black    ;
+            }
+            .navbar-inverse .navbar-brand {
+                color: black;
+            }
+            body{
+                width:100%;
+                height:100%;
+                align-items:stretch;
+            }
+    </style>
+
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Thư Viện ForBro", "Index", "TrangChu", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+
+                    <li>@Html.ActionLink("Admin", "Index", "Thuvien")</li>
+                    <li>@Html.ActionLink("Thư viện độc giả", "Index", "Home")</li>
+                    <li>@Html.Partial("~/Views/PhieuMuon/PhieuMuonPartial.cshtml")</li>
+                    <li>@Html.ActionLink("Chi tiết PM", "chitiet", "ChitietPM")</li>
+                    <li>@Html.ActionLink("Chi tiết PT", "Index", "ChitietPT")</li>
+                    <li>@Html.ActionLink("Đọc Giả", "Index", "Docgia")</li>
+                    <li>@Html.ActionLink("Nhân Viên", "Index", "NhanVien")</li>
+                    <li>@Html.ActionLink("Đăng nhập", "Index", "Dangnhap")</li>
+                    <li>@Html.ActionLink("Đăng kí", "Create", "Dangnhap")</li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+
+    </div>
+
+
+    
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @RenderSection("upload", required: false)
+</body>
+
+
+<footer class="bg-info" style="padding-left:50px ;width:100%;height:100%;align-items:end">
+    <div class="row">
+
+        <div class="col-md-3 col-sm-6">
+            <h2>Liên kết</h2>
+            <span>Tin tức Mobile</span>
+            <br />
+            <span>Lập trình Web</span>
+            <br />
+            <span>GenkVN</span>
+            <br />
+            <span>Dân trí</span>
+
+
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <h2>Thông tin</h2>
+            <span>Về chúng tôi</span>
+            <br />
+            <span>Liên hệ</span>
+            <br />
+            <span>Góp ý</span>
+            <br />
+            <span>Tra cứu</span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <h2>Theo dõi</h2>
+            <span>Kênh youtube</span>
+            <br />
+            <span>Fanpage</span>
+            <br />
+            <span>Shopee</span>
+            <br />
+            <span>Group</span>
+
+        </div>
+    </div>
+    <hr />
+    <center> <p class="bg-primary">&copy; @DateTime.Now.Year - Thu Vien Moi Da Den</p></center>
+</footer>
+</html>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<QuanLiThuVien.Models.DocGia>
+@{
+    ViewBag.Title = "Docgia";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Đọc Giả</h2>
+<p>
+    @Html.ActionLink("Thêm Đọc Giả", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th> Họ Tên </th>
+        <th> Ngày Sinh </th>
+        <th> Giới Tiính</th>
+        <th> Địa Chỉ</th>
+        <th> Email </th>
+        <th> Ngày Lập Thẻ </th>
+        <th> Ngày Hết Hạn </th>
+        <th> Tiền Nợ </th>
+
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.HoTen)</td>
+            <td>@Html.DisplayFor(modelItem => item.NgaySinh)</td>
+
+
+            <td>@Html.DisplayFor(modelItem => item.GioiTinh)</td>
+            <td>@Html.DisplayFor(modelItem => item.DiaChi)</td>
+            <td>@Html.DisplayFor(modelItem => item.Email)</td>
+            <td>@Html.DisplayFor(modelItem => item.NgayLapThe)</td>
+            <td>@Html.DisplayFor(modelItem => item.NgayHetHan)</td>
+            <td>@Html.DisplayFor(modelItem => item.TienNo)</td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MaDocGia }) |
+                @Html.ActionLink("Detail", "Detail", new { id = item.MaDocGia }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MaDocGia })
+            </td>
+        </tr>
+    }
+</table>

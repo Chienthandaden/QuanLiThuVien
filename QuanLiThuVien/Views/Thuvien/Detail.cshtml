@@ -1,0 +1,79 @@
+﻿@model QuanLiThuVien.Models.Sach
+
+@{
+    ViewBag.Title = "Chi tiet Sach";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thông Tin Chi Tiết</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Sách
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaSach)
+        </dd>
+        <dt>
+            Mã Thể Loại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaTheLoai)
+        </dd>
+
+        <dt>
+            Tên Sách
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSach)
+        </dd>
+
+        <dt>
+            Tác Giả
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TacGia)
+        </dd>
+
+        <dt>
+            Số Lượng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+        <dt>
+            Giá Tiền
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaTien)
+        </dd>
+
+        <dt>
+            Hình Ảnh
+        </dt>
+
+        <dd>
+            <img src="@Model.HinhAnh" width="150px" height="200px" />
+        </dd>
+
+        <dt>
+            Mô Tả
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MoTa )
+        </dd>
+
+    </dl>
+</div>
+<p>
+     
+    @Html.ActionLink("Trở về thư viện", "Index")
+</p>

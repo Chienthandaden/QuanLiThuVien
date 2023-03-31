@@ -1,0 +1,83 @@
+﻿@model QuanLiThuVien.Models.DocGia
+
+@{
+    ViewBag.Title = "Chi tiet doc gia";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chi Tiết</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Họ Tên
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTen)
+        </dd>
+
+        <dt>
+            Ngày Sinh
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgaySinh)
+        </dd>
+
+        <dt>
+            Giới Tính
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GioiTinh)
+        </dd>
+
+        <dt>
+            Địa Chỉ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            Email
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            Ngày Lập Thể
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayLapThe)
+        </dd>
+
+        <dt>
+            Ngày Hết Hạn
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayHetHan)
+        </dd>
+
+        <dt>
+            Tiền Nợ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TienNo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaDocGia }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

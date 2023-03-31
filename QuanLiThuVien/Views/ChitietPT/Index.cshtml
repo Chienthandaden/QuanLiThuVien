@@ -1,0 +1,40 @@
+﻿@model IEnumerable<QuanLiThuVien.Models.PhieuTra>
+@{
+    ViewBag.Title = "Chi Tiet Phieu Tra";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Phieu Tra</h2>
+<p>
+    @Html.ActionLink("Tao Phieu Tra", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th> Ten nguoi tra </th>
+        <th> Ma Doc Gia </th>
+        <th> Ma Sach</th>
+        <th> Ngay Tra</th>
+        <th> Tien Phat </th>
+        <th> Li Do Phat </th>
+
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.TenNguoiTra)</td>
+            <td>@Html.DisplayFor(modelItem => item.MaDocGia)</td>
+
+
+            <td>@Html.DisplayFor(modelItem => item.MaSach)</td>
+            <td>@Html.DisplayFor(modelItem => item.NgayTra)</td>
+            <td>@Html.DisplayFor(modelItem => item.TienPhat)</td>
+            <td>@Html.DisplayFor(modelItem => item.LiDoPhat)</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MaPhieuTra }) |
+                @Html.ActionLink("Detail", "Detail", new { id = item.MaPhieuTra }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MaPhieuTra })
+            </td>
+        </tr>
+    }
+</table>

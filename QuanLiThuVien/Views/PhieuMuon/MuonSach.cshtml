@@ -1,0 +1,109 @@
+﻿@model IEnumerable<QuanLiThuVien.Models.Phieumuon>
+@{
+    ViewBag.Title = "MuonSach";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Muon Sach</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Ma Sach
+        </th>
+        <th>
+            Ten Sach
+        </th>
+        <th>
+            Hinh
+        </th>
+        <th>
+            Tac Gia
+        </th>
+        <th>
+            NXB
+        </th>
+        <th>
+            So Luong
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaSach)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenSach)
+            </td>
+            <td>
+                <img src="@item.HinhAnh" width="200" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TacGia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NhaXuatBan)
+            </td>
+
+            @using (Html.BeginForm("CapnhatPhieumuon", "Phieumuon", new { @id = item.MaSach }))
+            {
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.iSoluong)
+                </td>
+
+            }
+        </tr>
+    }
+    <tr style="font-weight:bold ;text-align:right;color:red">
+        <td colspan="3">So luong sach: @ViewBag.Tongsoluong</td>
+        <td colspan="4">So loai sach: @ViewBag.Tongsoluongsanpham</td>
+        
+    </tr>
+    <tr style="font-weight:bold;text-align:right">
+        <td colspan="6">@Html.ActionLink("Tro ve phieu muon", "PhieuMuon", "PhieuMuon")</td>
+    </tr>
+</table>
+@using QuanLiThuVien.Models
+<h2 style="text-align:center">Thong tin phieu muon</h2>
+@{
+    DocGia kh = (DocGia)Session["TaiKhoan"];
+}
+<table align="center">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <tr style="height:40px">
+            <td>Ho ten doc gia: </td>
+            <td style="font-weight:bold">@kh.HoTen</td>
+        </tr>
+        <tr style="height:40px">
+            <td>Email: </td>
+            <td style="font-weight:bold">@kh.Email</td>
+        </tr>
+        <tr style="height:40px">
+            <td>Dia chi: </td>
+            <td style="font-weight:bold">@kh.DiaChi</td>
+        </tr>
+        
+        <tr style="height:40px">
+            <td>Ngay dat: </td>
+            <td style="font-weight:bold">@DateTime.Now.ToShortDateString()</td>
+        </tr>
+        <tr style="height:40px">
+            <td>Ngay tra: </td>
+            <td style="font-weight:bold"><input type="date" name="NgayGiao" /></td>
+        </tr>
+        <tr style="height:40px">
+            <td></td>
+            <td style="font-weight:bold"><input type="submit" value="Xac nhan" class="btn btn-success" /></td>
+        </tr>
+    }
+</table>

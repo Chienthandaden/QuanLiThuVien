@@ -1,0 +1,67 @@
+﻿@model QuanLiThuVien.Models.PhieuTra
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detail</h2>
+
+<div>
+    <h4>PhieuTra</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Ma Doc Gia
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaDocGia)
+        </dd>
+
+        <dt>
+            Ma Sach
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaSach)
+        </dd>
+
+        <dt>
+            Ngay Tra
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayTra)
+        </dd>
+
+        <dt>
+            Tien Phat
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TienPhat)
+        </dd>
+
+        <dt>
+            Ten Nguoi Tra
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenNguoiTra)
+        </dd>
+
+        <dt>
+            Li Do Phat
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LiDoPhat)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaPhieuTra }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

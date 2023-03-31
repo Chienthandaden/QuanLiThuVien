@@ -1,0 +1,65 @@
+﻿@model QuanLiThuVien.Models.PhieuMuon
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Xoa Phieu Muon</h2>
+
+<h3> Chac Chua?</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Ma Doc Gia
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaDocGia)
+        </dd>
+
+        <dt>
+            Ma Sach
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaSach)
+        </dd>
+
+        <dt>
+            Ngay Muon
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayMuon)
+        </dd>
+
+        <dt>
+            Ngay Hen Tra
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayHenTra)
+        </dd>
+
+        <dt>
+            Ten Nguoi Muon
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenNguoiMuon)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "chitiet")
+        </div>
+    }
+</div>

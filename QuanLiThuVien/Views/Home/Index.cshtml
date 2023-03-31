@@ -1,0 +1,105 @@
+﻿@model PagedList.IPagedList<QuanLiThuVien.Models.Sach>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }<h2>HUTECH SÁCH</h2>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Tên Sách: @Html.TextBox("SearchString") <input type="submit" value="Tìm kiếm" />
+    </p>
+    <div class="btn btn-default">
+        @Html.ActionLink("Giá", "Thuvien", new { sortProperty = "GiaTien", sortOrder = ViewBag.SortOrder })
+    </div>
+    <div class="btn btn-default">
+        @Html.ActionLink("Tên", "Thuvien", new { sortProperty = "TenSach", sortOrder = ViewBag.SortOrder })
+    </div>
+    <div class="btn btn-default">
+        @Html.ActionLink("Mã Phím", "Thuvien", new { sortProperty = "MaSach", sortOrder = ViewBag.SortOrder })
+    </div>
+}
+
+
+<div class="row">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel panel-heading">
+                    @item.TenSach
+                </div>
+                <div class="panel-body">
+                    <p><strong>Tac Gia: </strong>@item.TacGia</p>
+                    <p><strong>Giá: </strong>@item.GiaTien</p>
+                    <p><strong>Số lượng tồn: </strong>@item.SoLuong</p>
+                    <p><img src="@item.HinhAnh" alt="hinh thumnail" width="150px" height="200px"></p>
+                </div>
+                <div class="panel-footer clearfix">
+                    <div class="pull-right">
+                        <div class="DatMua">
+                            <a class="btn btn-success" href="@Url.Action("ThemPhieuMuon", "PhieuMuon",new { @id = item.MaSach, @strURL = Request.Url.ToString() })">Muon</a>
+                            <a href="@Url.Action("Detail","Thuvien", new {id=item.MaSach})"> Chi tiet</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<div>
+    <div>
+        Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) /
+        @Model.PageCount
+    </div>
+    <div class="MenuTrang">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new
+        {
+            page = page
+       }))
+    </div>
+</div>
+<style>
+    .MenuTrang li {
+        display: inline;
+    }
+</style>
+<style type="text/css">
+    #mau-nut a {
+        clear: both;
+        background-color: orange;
+        color: snow;
+    }
+
+        #mau-nut a:hover {
+            background-color: darkcyan;
+            color: snow;
+        }
+</style>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var maxLength = 100;
+        $(".show-read-more").each(function () {
+            var myStr = $(this).text();
+            if ($.trim(myStr).length > maxLength) {
+                var newStr = myStr.substring(0, maxLength);
+                var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+                $(this).empty().html(newStr);
+                $(this).append(' <a href="javascript:void(0);" class="readmore">đọc tiếp...</a>');
+                $(this).append('<span class="more-text">' + removedStr +
+                    '</span>');
+            }
+        });
+        $(".read-more").click(function () {
+            $(this).siblings(".more-text").contents().unwrap(); $(this).remove();
+        });
+    });
+</script>
+<style>
+    .show-read-more .more-text {
+        display: none;
+    }
+</style>

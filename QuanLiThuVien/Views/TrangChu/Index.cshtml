@@ -1,0 +1,72 @@
+﻿
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{ ViewData["Title"] = "Trang chủ"; }
+
+<div class="container-fluid">
+    <h1 class="mt-4">Trang chủ</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Trình điều khiển</li>
+    </ol>
+    <div class="row" style="display: flex; justify-content: center; align-items: center; padding-right:10px ; padding-left:10px">
+        <div class="col-xl-4 col-md-4" style="background-color:yellow;width:200px;height:110px; border-radius: 20px" />
+        <div class="card badge-warning text-white mb-4" style="margin-top:15px;justify-content:space-between">
+            <div class="card-body" style="color:black">QUẢN LÝ SÁCH </div>
+            <div class="card-footer d-flex align-items-center justify-content-between" style="align-content:flex-end;">
+                <hr style="background-color: red;" />
+                <a class="small text-white stretched-link" href="/Thuvien/Index">View Details</a>
+                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-md-4" style="background-color:purple;width:200px;height:110px; border-radius: 20px">
+        <div class="card badge-primary text-white mb-4" style="margin-top:15px;justify-content:space-between">
+            <div class="card-body" style="color:black">QUẢN LÝ NV</div>
+            <hr />
+            <div class="card-footer d-flex align-items-center justify-content-between" style="align-content:flex-end">
+                <a class="small text-white stretched-link" href="/NhanVien/Index">View Details</a>
+                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-md-4" style="background-color:red;width:200px;height:110px; border-radius: 20px">
+        <div class="card badge-warning text-white mb-4" style="margin-top:15px;justify-content:space-between">
+            <div class="card-body">QUẢN LÝ PHIẾU MƯỢN</div>
+            <div class="card-footer d-flex align-items-center justify-content-between" style="align-content:flex-end">
+                <hr />
+                <a class="small text-white stretched-link" href="/ChitietPM/chitiet">View Details</a>
+                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-md-4" style="background-color:green;width:200px;height:110px; border-radius: 20px">
+        <div class="card badge-success text-white mb-4" style="margin-top:15px;justify-content:space-between">
+            <div class="card-body">QUẢN LÝ PHIẾU TRẢ</div>
+            <hr />
+            <div class="card-footer d-flex align-items-center justify-content-between" style="align-content:flex-end">
+                <a class="small text-white stretched-link" href="/ChitietPT/Index">View Details</a>
+                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-xl-4 col-md-4" style="background-color: blue; width: 200px; height: 110px; border-radius: 20px; ">
+        <div class="card badge-info text-white mb-4" style="margin-top:15px;justify-content:space-between">
+            <div class="card-body">QUẢN LÝ NGƯỜI DÙNG</div>
+            <hr />
+            <div class="card-footer d-flex align-items-center justify-content-between" style="align-content:flex-end">
+                <a class="small text-white stretched-link" href="/DocGia/Index">View Details</a>
+                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div>
+    <img src="~/Content/img/1 (1).jpg" alt="hinh thumbnail" style="padding-top:50px; width:100%; justify-content:space-around;align-items:center; object-fit:cover" />
+</div>
