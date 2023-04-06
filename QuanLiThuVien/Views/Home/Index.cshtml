@@ -10,13 +10,13 @@
         Tên Sách: @Html.TextBox("SearchString") <input type="submit" value="Tìm kiếm" />
     </p>
     <div class="btn btn-default">
-        @Html.ActionLink("Giá", "Thuvien", new { sortProperty = "GiaTien", sortOrder = ViewBag.SortOrder })
+        @Html.ActionLink("Giá", "Index", new { sortProperty = "GiaTien", sortOrder = ViewBag.SortOrder })
     </div>
     <div class="btn btn-default">
-        @Html.ActionLink("Tên", "Thuvien", new { sortProperty = "TenSach", sortOrder = ViewBag.SortOrder })
+        @Html.ActionLink("Tên", "Index", new { sortProperty = "TenSach", sortOrder = ViewBag.SortOrder })
     </div>
     <div class="btn btn-default">
-        @Html.ActionLink("Mã Phím", "Thuvien", new { sortProperty = "MaSach", sortOrder = ViewBag.SortOrder })
+        @Html.ActionLink("Ma Sach", "Index", new { sortProperty = "MaSach", sortOrder = ViewBag.SortOrder })
     </div>
 }
 
@@ -40,7 +40,7 @@
                     <div class="pull-right">
                         <div class="DatMua">
                             <a class="btn btn-success" href="@Url.Action("ThemPhieuMuon", "PhieuMuon",new { @id = item.MaSach, @strURL = Request.Url.ToString() })">Muon</a>
-                            <a href="@Url.Action("Detail","Thuvien", new {id=item.MaSach})"> Chi tiet</a>
+                            <a href="@Url.Action("Detail","Home", new {id=item.MaSach})"> Chi tiet</a>
                         </div>
                     </div>
                 </div>

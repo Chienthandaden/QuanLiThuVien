@@ -3,7 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Data.Linq;
 using System.Diagnostics;
+using System.Drawing.Printing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Web;
 using System.Web.Mvc;
 
@@ -12,7 +14,7 @@ namespace QuanLiThuVien.Controllers
     public class ThuvienController : Controller
     {
         MyDataDataContext data = new MyDataDataContext();
-        public ActionResult Index(string searchString, string sortOrder)
+        public ActionResult Index(string searchString, string sortOrder, string sortProperty)
         {
             Debug.WriteLine(Session["UserLoaitk"]);
             if (Session["UserLoaitk"].ToString() == "2")
@@ -25,12 +27,14 @@ namespace QuanLiThuVien.Controllers
             {
                 all_sach = all_sach.Where(s => s.TenSach.Contains(searchString)); //lọc theo chuỗi tìm kiếm
             }
-            
+           
+
+
+
             return View(all_sach);
         }
 
 
-        
 
         public ActionResult Detail(int id)
         {
